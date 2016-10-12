@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>polymer-input-params test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../polymer-input-params.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <polymer-input-params></polymer-input-params>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('polymer-input-params', function() {
+
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'polymer-input-params');
+        });
+
+      });
+    </script>
+  </body>
+</html>

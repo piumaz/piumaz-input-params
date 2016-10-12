@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>polymer-input-params demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+	
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+	
+	<link rel="import" href="../../paper-button/paper-button.html">
+	<link rel="import" href="../../iron-label/iron-label.html">
+	
+	<link rel="import" href="../piumaz-input-params.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic piumaz-input-params Demo</h3>
+      <demo-snippet>
+        <template>
+		
+			<form is="iron-form" action="" method="post">
+			
+				<paper-input is="iron-input" name="input1" label="Input1"></paper-input>
+				
+				<iron-label for="params">
+					Context for the button with the "foo" class"
+				</iron-label>
+				<piumaz-input-params id="params" name="params" value='{
+					"nome": "Antani",
+					"cognome": "Sborbora",
+					"cucunna": "Sticazzi sto valore"
+				  }'></piumaz-input-params>
+				
+
+		  
+				<paper-input is="iron-input" name="input2" label="Input2"></paper-input>
+		  
+				<paper-button raised>Invia</paper-button>
+		  </form>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>

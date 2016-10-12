@@ -1,0 +1,64 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-input/paper-textarea.html">
+<link rel="import" href="../iron-input/iron-input.html">
+<!--
+`piumaz-input-params`
+An input table to manage key/value parametres
+
+@demo demo/index.html 
+-->
+
+<dom-module id="piumaz-input-params">
+	<template>
+		<style>
+		:host {
+			display: block;
+			border:1px solid var(--light-theme-divider-color);
+			padding:20px;
+		}
+		</style>
+
+		<template is="dom-repeat" items="{{_toArray(value)}}">
+			<div>
+				<paper-textarea 
+				is="iron-input" 
+				name="{{name}}[{{item.name}}]" 
+				label="{{item.name}}" 
+				always-float-label 
+				value="{{item.value::input}}">
+			</div>
+		</template>
+
+	</template>
+
+	<script>
+		Polymer({
+
+			is: 'piumaz-input-params',
+
+			properties: {
+				name: String,
+				value: {
+				  type: Object,
+				  notify: true,
+				  value: function () { return {}; }
+				},
+			},
+
+			_toArray: function(obj) {
+				return Object.keys(obj).map(function(key) {
+					return {
+						name: key,
+						value: obj[key]
+					};
+				});
+			},
+		
+			ready: function() {
+
+			},
+
+		});
+	</script>
+</dom-module>
