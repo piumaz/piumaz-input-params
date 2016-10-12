@@ -2,6 +2,10 @@
 
 An input table to manage key/value parametres
 
+## Bower install
+
+--save PolymerElements/iron-collapse
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
